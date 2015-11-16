@@ -1,0 +1,43 @@
+" Plugins used:
+" https://github.com/tpope/vim-pathogen
+" https://github.com/fatih/vim-go
+" https://github.com/Valloric/YouCompleteMe
+" https://github.com/airblade/vim-gitgutter
+execute pathogen#infect()
+syntax on "syntax 
+filetype on "filetype detection 
+filetype plugin indent on "filetype-based indentation 
+set tabstop=4 expandtab shiftwidth=4 softtabstop=4 "python-compatible tab setup 
+set foldmethod=indent foldlevel=99 "python-compatible folding
+set number "line numbers
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+syntax enable
+let mapleader = ','
+set hlsearch
+
+" Settings for YouCompleteMe ( https://github.com/Valloric/YouCompleteMe )
+let g:ycm_key_invoke_completion = '<C-Space>'
+let g:ycm_auto_trigger = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" Settings for gitgutter ( https://github.com/airblade/vim-gitgutter )
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hu <Plug>GitGutterRevertHunk
+highlight GitGutterChange ctermfg=3 guifg=#bbbb00
+highlight GitGutterAdd ctermfg=2 guifg=#009900
+highlight GitGutterDelete ctermfg=1 guifg=#ff2222
+highlight GitGutterChangeDelete ctermfg=3 guifg=#bbbb00
+highlight clear SignColumn
+highlight SignColumn ctermfg=12 guifg=Cyan
+
+" Hilight cursor position
+highlight CursorLine   cterm=NONE ctermbg=darkgray ctermfg=black guibg=darkred guifg=white
+
+vmap <C-x> x
+imap <C-v> <esc>P
+nmap <C-n> :set nonumber!<CR>:GitGutterToggle<CR>
+nmap <C-h> :set cursorline!<CR>
