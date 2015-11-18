@@ -3,6 +3,7 @@
 " https://github.com/fatih/vim-go
 " https://github.com/Valloric/YouCompleteMe
 " https://github.com/airblade/vim-gitgutter
+" https://github.com/altercation/vim-colors-solarized
 execute pathogen#infect()
 syntax on "syntax 
 filetype on "filetype detection 
@@ -17,6 +18,8 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 syntax enable
 let mapleader = ','
 set hlsearch
+colorscheme solarized
+set background=dark
 
 " Settings for YouCompleteMe ( https://github.com/Valloric/YouCompleteMe )
 let g:ycm_key_invoke_completion = '<C-Space>'
