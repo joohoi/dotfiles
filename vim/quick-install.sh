@@ -16,6 +16,9 @@ git clone https://github.com/fatih/vim-go
 # vim-gitgutter
 git clone https://github.com/airblade/vim-gitgutter
 
+# solarized theme
+git clone https://github.com/altercation/vim-colors-solarized
+
 # vim-ansible-yaml
 git clone git://github.com/chase/vim-ansible-yaml.git
 
