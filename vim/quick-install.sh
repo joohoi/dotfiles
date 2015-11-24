@@ -19,6 +19,9 @@ git clone https://github.com/airblade/vim-gitgutter
 # solarized theme
 git clone https://github.com/altercation/vim-colors-solarized
 
+# vim-indent-object
+git clone http://github.com/michaeljsmith/vim-indent-object
+
 # vim-ansible-yaml
 git clone git://github.com/chase/vim-ansible-yaml.git
 
