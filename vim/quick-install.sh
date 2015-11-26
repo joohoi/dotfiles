@@ -25,6 +25,9 @@ git clone http://github.com/michaeljsmith/vim-indent-object
 # vim-ansible-yaml
 git clone git://github.com/chase/vim-ansible-yaml.git
 
+# python mode
+git clone https://github.com/klen/python-mode.git
+
 # ycm
 # !! NEEDS cmake 
 git clone https://github.com/Valloric/YouCompleteMe
