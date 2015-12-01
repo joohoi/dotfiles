@@ -30,7 +30,7 @@ git clone https://github.com/klen/python-mode.git
 
 # ycm
 # !! NEEDS cmake 
-git clone https://github.com/Valloric/YouCompleteMe
-cd YouCompleteMe
-./install.sh
-cd ..
+# git clone https://github.com/Valloric/YouCompleteMe
+# cd YouCompleteMe
+#./install.sh
+# cd ..
