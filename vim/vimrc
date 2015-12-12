@@ -24,6 +24,9 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 syntax enable
 let mapleader = ','
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 colorscheme solarized
 set background=dark
 
