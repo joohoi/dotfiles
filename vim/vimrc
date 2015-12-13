@@ -29,6 +29,10 @@ set ignorecase
 set smartcase
 colorscheme solarized
 set background=dark
+" tmp file handling
+set nobackup
+set nowritebackup
+set noswapfile
 
 " Settings for YouCompleteMe ( https://github.com/Valloric/YouCompleteMe )
 " let g:ycm_key_invoke_completion = '<C-Space>'
