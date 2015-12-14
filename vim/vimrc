@@ -1,28 +1,39 @@
-" Plugins used:
-" https://github.com/tpope/vim-pathogen
-" https://github.com/fatih/vim-go
-" https://github.com/Valloric/YouCompleteMe
-" https://github.com/airblade/vim-gitgutter
-" https://github.com/altercation/vim-colors-solarized
-execute pathogen#infect()
-syntax on "syntax 
-filetype on "filetype detection 
-filetype plugin indent on "filetype-based indentation 
-set tabstop=4 expandtab shiftwidth=4 softtabstop=4 "python-compatible tab setup 
+call plug#begin('~/.vim/plugged')
+
+" python-mode
+Plug 'klen/python-mode'
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Using git URL
+" Plug 'junegunn/vim-github-dashboard.git'
+
+" Go
+Plug 'fatih/vim-go'
+
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+
+" Powerline
+Plug 'powerline/powerline'
+
+" CtrlP
+Plug 'kien/ctrlp.vim'
+
+" Unmanaged plugin (manually installed and updated)
+" Plug '~/my-prototype-plugin'
+
+" Add plugins to &runtimepath
+call plug#end()
+
+syntax on
+filetype on
+filetype plugin indent on
+set tabstop=4 expandtab shiftwidth=4 softtabstop=4
 set foldmethod=indent foldlevel=99 "python-compatible folding
 set number "line numbers
-" use clipboard for copy and paste 
 set clipboard=unnamed
-" mouse, alt on osx
-set mouse=a
-
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red 
-syntax enable
-let mapleader = ','
 set hlsearch
 set incsearch
 set ignorecase
@@ -33,14 +44,10 @@ set background=dark
 set nobackup
 set nowritebackup
 set noswapfile
+let mapleader = ','
+set laststatus=2
 
-" Settings for YouCompleteMe ( https://github.com/Valloric/YouCompleteMe )
-" let g:ycm_key_invoke_completion = '<C-Space>'
-" let g:ycm_auto_trigger = 0
-" let g:ycm_autoclose_preview_window_after_completion = 1
-" let g:ycm_autoclose_preview_window_after_insertion = 1
-
-" Settings for gitgutter ( https://github.com/airblade/vim-gitgutter )
+" GitGutter
 nmap <Leader>ha <Plug>GitGutterStageHunk
 nmap <Leader>hu <Plug>GitGutterRevertHunk
 highlight GitGutterChange ctermfg=3 guifg=#bbbb00
@@ -50,17 +57,14 @@ highlight GitGutterChangeDelete ctermfg=3 guifg=#bbbb00
 highlight clear SignColumn
 highlight SignColumn ctermfg=12 guifg=Cyan
 
-" Hilight cursor position
-highlight CursorLine   cterm=NONE ctermbg=darkgray ctermfg=black guibg=darkred guifg=white
-
-vmap <C-x> x
-imap <C-v> <esc>P
 nmap <C-n> :set nonumber!<CR>:GitGutterToggle<CR>
-nmap <C-h> :set cursorline!<CR>
+nmap <F8> :TagbarToggle<CR>
 
 " indent shortcut
 vnoremap < <gv
 vnoremap > >gv
 
-" rope configuration
-map <Leader>g :call RopeGotoDefinition()<CR>
+" rope conf
+let g:pymode_rope_goto_definition_bind = "<Leader>g"
+
+set rtp+=~/.vim/plugged/powerline/powerline/bindings/vim
