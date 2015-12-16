@@ -22,9 +22,9 @@ Plug 'powerline/powerline'
 " CtrlP
 Plug 'kien/ctrlp.vim'
 
-Plug 'scrooloose/nerdtree'
-
 Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'tpope/vim-fugitive'
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
