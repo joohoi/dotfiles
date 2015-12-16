@@ -49,7 +49,7 @@ set background=dark
 set nobackup
 set nowritebackup
 set noswapfile
-let mapleader = ','
+let mapleader = "\<Space>"
 set laststatus=2
 
 " GitGutter
