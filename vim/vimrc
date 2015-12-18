@@ -51,6 +51,7 @@ set nowritebackup
 set noswapfile
 let mapleader = "\<Space>"
 set laststatus=2
+set diffopt+=vertical
 
 " GitGutter
 nmap <Leader>ha <Plug>GitGutterStageHunk
