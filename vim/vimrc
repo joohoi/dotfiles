@@ -76,10 +76,10 @@ let g:pymode_rope_goto_definition_bind = "<Leader>g"
 set rtp+=~/.vim/plugged/powerline/powerline/bindings/vim
 
 " disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
 
 " NerdTREE (close if last window open)
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
