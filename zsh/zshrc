@@ -82,3 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# 
+# #virtualenvwrapper
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
+   source /usr/local/bin/virtualenvwrapper.sh
+fi
