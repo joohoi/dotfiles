@@ -64,7 +64,7 @@ highlight GitGutterChangeDelete ctermfg=3 guifg=#bbbb00
 highlight clear SignColumn
 highlight SignColumn ctermfg=12 guifg=Cyan
 
-nmap <C-n> :set nonumber!<CR>:GitGutterToggle<CR>
+nmap <C-n> :set nonumber!<CR>:set norelativenumber!<CR>:GitGutterToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " indent shortcut
