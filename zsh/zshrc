@@ -91,14 +91,14 @@ if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
    source /usr/local/bin/virtualenvwrapper.sh
 fi
 if [[ -a /usr/local/bin/mvnactivate-3.0.5.sh ]]; then
-   source /usr/local/bin/mvnactivate-3.0.5.sh
+   alias mvn305="source /usr/local/bin/mvnactivate-3.0.5.sh"
 fi
 if [[ -a /usr/local/bin/mvnactivate-3.1.1.sh ]]; then
-   source /usr/local/bin/mvnactivate-3.1.1.sh
+   alias mvn311="source /usr/local/bin/mvnactivate-3.1.1.sh"
 fi
 if [[ -a /usr/local/bin/java7.sh ]]; then
-   source /usr/local/bin/java7.sh
+   alias java7="source /usr/local/bin/java7.sh"
 fi
 if [[ -a /usr/local/bin/java8.sh ]]; then
-   source /usr/local/bin/java8.sh
+   alias java8="source /usr/local/bin/java8.sh"
 fi
