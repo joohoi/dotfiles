@@ -1,0 +1,6 @@
+[profiles]
+ [[default]]
+   show_titlebar = False
+   copy_on_selection = True
+   cursor_blink = True
+   scrollbar_position = disabled
