@@ -5,7 +5,7 @@ export ZSH=/Users/joona/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="avit"
+ZSH_THEME="avitjoohoi"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,17 +88,17 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]; then
-   source /usr/local/bin/virtualenvwrapper.sh
+    source /usr/local/bin/virtualenvwrapper.sh
 fi
 if [[ -a /usr/local/bin/mvnactivate-3.0.5.sh ]]; then
-   alias mvn305="source /usr/local/bin/mvnactivate-3.0.5.sh"
+    alias mvn305="source /usr/local/bin/mvnactivate-3.0.5.sh"
 fi
 if [[ -a /usr/local/bin/mvnactivate-3.1.1.sh ]]; then
-   alias mvn311="source /usr/local/bin/mvnactivate-3.1.1.sh"
+    alias mvn311="source /usr/local/bin/mvnactivate-3.1.1.sh"
 fi
 if [[ -a /usr/local/bin/java7.sh ]]; then
-   alias java7="source /usr/local/bin/java7.sh"
+    alias java7="source /usr/local/bin/java7.sh"
 fi
 if [[ -a /usr/local/bin/java8.sh ]]; then
-   alias java8="source /usr/local/bin/java8.sh"
+    alias java8="source /usr/local/bin/java8.sh"
 fi

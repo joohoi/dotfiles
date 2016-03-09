@@ -26,6 +26,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'tpope/vim-fugitive'
 
+Plug 'pearofducks/ansible-vim'
+
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
 
