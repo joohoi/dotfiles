@@ -38,6 +38,9 @@ syntax on
 filetype on
 filetype plugin indent on
 set tabstop=4 expandtab shiftwidth=4 softtabstop=4
+set shiftround "always multiple of shiftwidth
+set smarttab "more intelligent handling
+set smartindent "if no ident file
 set foldmethod=indent foldlevel=99 "python-compatible folding
 set number "line numbers
 set relativenumber "relative numbers too
