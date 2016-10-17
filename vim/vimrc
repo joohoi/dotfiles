@@ -30,6 +30,8 @@ Plug 'pearofducks/ansible-vim'
 
 Plug 'smerrill/vcl-vim-plugin'
 
+Plug 'vimwiki/vimwiki'
+
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
 
