@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'klen/python-mode'
 
 " On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree' ", { 'on':  'NERDTreeToggle' }
 
 " Using git URL
 " Plug 'junegunn/vim-github-dashboard.git'
@@ -22,11 +22,13 @@ Plug 'powerline/powerline'
 " CtrlP
 Plug 'kien/ctrlp.vim'
 
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'tpope/vim-fugitive'
 
 Plug 'pearofducks/ansible-vim'
+
+Plug 'smerrill/vcl-vim-plugin'
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
@@ -58,6 +60,7 @@ set noswapfile
 let mapleader = "\<Space>"
 set laststatus=2
 set diffopt+=vertical
+set backspace=indent,eol,start
 
 " GitGutter
 nmap <Leader>ha <Plug>GitGutterStageHunk
@@ -88,6 +91,9 @@ set rtp+=~/.vim/plugged/powerline/powerline/bindings/vim
 " noremap <Right> <NOP>
 
 " NerdTREE (close if last window open)
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Bind NerdTREE
-nmap <C-m> :NERDTreeToggle<CR>
+" nmap <C-m> :NERDTreeToggle<CR>
+
+" Linter bind
+nmap <leader>ll :PymodeLint<CR> 
