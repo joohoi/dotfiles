@@ -32,6 +32,8 @@ Plug 'smerrill/vcl-vim-plugin'
 
 Plug 'vimwiki/vimwiki'
 
+Plug 'mattn/calendar-vim'
+
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
 
@@ -99,3 +101,23 @@ set rtp+=~/.vim/plugged/powerline/powerline/bindings/vim
 
 " Linter bind
 nmap <leader>ll :PymodeLint<CR> 
+
+" Vimwiki
+au BufRead,BufNewFile *.wiki set filetype=vimwiki
+:autocmd FileType vimwiki map <Leader>d :VimwikiMakeDiaryNote
+
+" Cal bind
+function! ToggleCalendar()
+  execute ":Calendar"
+  if exists("g:calendar_open")
+    if g:calendar_open == 1
+      execute "q"
+      unlet g:calendar_open
+    else
+      g:calendar_open = 1
+    end
+  else
+    let g:calendar_open = 1
+  end
+endfunction
+:autocmd FileType vimwiki map c :call ToggleCalendar()
