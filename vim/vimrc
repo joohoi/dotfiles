@@ -19,6 +19,9 @@ Plug 'altercation/vim-colors-solarized'
 " Powerline
 Plug 'powerline/powerline'
 
+" Autocomplete
+Plug 'Shougo/neocomplete.vim'
+
 " CtrlP
 Plug 'kien/ctrlp.vim'
 
@@ -85,6 +88,9 @@ vnoremap > >gv
 
 " rope conf
 let g:pymode_rope_goto_definition_bind = "<Leader>g"
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope = 0
 
 set rtp+=~/.vim/plugged/powerline/powerline/bindings/vim
 
@@ -125,3 +131,10 @@ endfunction
 " Autoindent & prettyprint
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 au FileType json setlocal equalprg=python\ -m\ json.tool
+
+" Tab width
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype python setlocal ts=4 expandtab sts=4 sw=4
+
+" Autocomplete
+let g:neocomplete#enable_at_startup = 1
