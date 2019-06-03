@@ -24,7 +24,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Autocomplete
-Plug 'Shougo/neocomplete.vim'
+"Plug 'Shougo/neocomplete.vim'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 0
 
 " CtrlP
 Plug 'kien/ctrlp.vim'
@@ -146,3 +154,11 @@ autocmd Filetype python setlocal ts=4 expandtab sts=4 sw=4
 
 " Autocomplete
 let g:neocomplete#enable_at_startup = 1
+
+" Date
+nmap <F3> i<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+
+" Nonascii hilight
+highlight nonascii guibg=Red ctermbg=1 term=standout
+au BufReadPost * syntax match nonascii "[^\u0000-\u007F]"
